@@ -15,16 +15,20 @@ window.PineSchedule.load = function(dom_id, data) {
 
   var DEFAULT = {
     TIME_BLOCK_COLOR: data.optionals.background_color,
+    HEADER_ALIGNMENT: data.optionals.header_alignment ? data.optionals.header_alignment : "right",
     HEADER_FONT_SIZE: data.optionals.header_font_size ? data.optionals.header_font_size : "25px",
     HEADER_FONT: data.optionals.header_font ? data.optionals.header_font : "Verdana, Geneva, sans-serif",
     BORDERS: !!data.optionals.borders
   };
 
   var container = d3.select(dom_id).style("font-family", DEFAULT.HEADER_FONT);
+  var table = container.append("table");
 
-  var header = container.append("div").style("text-align", "right").style("font-size", DEFAULT.HEADER_FONT_SIZE);
-  header.append("b").text(data.day_of_week);
-  header.append("span").text(", " + data.month + " " + data.day);
+  var header = table.append("thead").style("text-align", DEFAULT.HEADER_ALIGNMENT).style("font-size", DEFAULT.HEADER_FONT_SIZE);
+  header.append("th");
+  header_data = header.append("th");
+  header_data.append("b").text(data.day_of_week);
+  header_data.append("span").text(", " + data.month + " " + data.day);
 
   var data_at_time = [];
   data.events.forEach(function(e) {
@@ -60,7 +64,6 @@ window.PineSchedule.load = function(dom_id, data) {
     time_blocks.push(new TimeBlock(t, d.event, d.display_type));
   }
 
-  var table = container.append("table");
   table.style("width", "100%").style("border-collapse", "collapse");
   rows = table.selectAll("tr").data(time_blocks).enter().append("tr").style("height", "25px");
 
