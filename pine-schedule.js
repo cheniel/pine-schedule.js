@@ -24,9 +24,10 @@ window.PineSchedule.load = function(dom_id, data) {
   var container = d3.select(dom_id).style("font-family", DEFAULT.HEADER_FONT);
   var table = container.append("table");
 
-  var header = table.append("thead").style("text-align", DEFAULT.HEADER_ALIGNMENT).style("font-size", DEFAULT.HEADER_FONT_SIZE);
+  var header = table.append("thead");
   header.append("th");
   header_data = header.append("th");
+  header_data.style("text-align", DEFAULT.HEADER_ALIGNMENT).style("font-size", DEFAULT.HEADER_FONT_SIZE);
   header_data.append("b").text(data.day_of_week);
   header_data.append("span").text(", " + data.month + " " + data.day);
 
