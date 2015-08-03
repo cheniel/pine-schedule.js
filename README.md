@@ -1,6 +1,7 @@
 # pine-schedule.js
 Pine Schedule is a schedule widget built on [D3.js](http://d3js.org/) originally built for the [HackDartmouth website](https://github.com/hackdartmouth/hackdartmouth.github.io).
 
+<img src="https://raw.githubusercontent.com/cheniel/pine-schedule.js/master/sample.png" width="400px">
 
 ## Why?
 - It looks nice and is easy to set-up.
@@ -52,7 +53,7 @@ PineSchedule.load("#pine-schedule", {
 
 
 ## Optional specifications
-You may further customize the apperance by adding an additional "optionals" object. Here is an example which reflects what HackDartmouth uses:
+You may further customize the apperance by adding an additional "optionals" object. Here is an example which reflects what HackDartmouth uses, shown in the sample image at the top of the README:
 ```js
 PineSchedule.load("#pine-schedule", {
   "optionals": {
