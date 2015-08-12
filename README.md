@@ -34,7 +34,7 @@ PineSchedule.load("#pine-schedule", {
   "month": "OCT",                       // for header display
   "day": 3,                             // for header display
   "range": {                            // start and end times of schedule
-    "start": 9.0, 
+    "start": 9.0,
     "end": 23.0
   },
   "events": [
@@ -58,10 +58,10 @@ You may further customize the apperance by adding an additional "optionals" obje
 PineSchedule.load("#pine-schedule", {
   "optionals": {
     "borders": true,                               // default is false
-    "background_color": "#FFFFFF"                  // default is undefined (transparent) 
-    "header_alignment": "center"                   // default is "right"
-    "header_font_size": "25px"                     // default
-    "header_font": "Verdana, Geneva, sans-serif"   // default
+    "background_color": "#FFFFFF",                 // default is undefined (transparent)
+    "header_alignment": "center",                  // default is "right"
+    "header_font_size": "25px",                    // default
+    "header_font": "Verdana, Geneva, sans-serif",  // default
     "show_grid_on_event": false                    // default
   },
   // ... remaining specifications
