@@ -39,9 +39,9 @@ PineSchedule.load("#pine-schedule", {
   },
   "events": [
     {
-      "time_range": "10-11am",          // used for event display
+      "time_range": "10-11am",          // used for event display, optional
       "name": "REGISTRATION",           // used for event display
-      "location": "Cook Auditorium",    // used for event display
+      "location": "Cook Auditorium",    // used for event display, optional
       "color": "#8BB9B6",               // background color for event
       "start": 10.0,
       "end": 11.0
